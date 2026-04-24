@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 210 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 12%;
+
+    /* Areka brand: navy blue #1a3c5e */
+    --primary: 210 57% 24%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 210 57% 38%;
+
+    --secondary: 210 30% 95%;
+    --secondary-foreground: 210 50% 18%;
+
+    --muted: 210 25% 95%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 71% 38%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 210 90% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 89%;
+    --input: 210 20% 89%;
+    --ring: 210 57% 24%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(210 57% 18%) 0%, hsl(210 57% 28%) 60%, hsl(210 60% 38%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
+    --shadow-soft: 0 2px 8px -2px hsl(210 50% 20% / 0.08);
+    --shadow-card: 0 4px 16px -4px hsl(210 50% 20% / 0.10);
+    --shadow-elegant: 0 20px 50px -20px hsl(210 57% 24% / 0.35);
+
+    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 210 57% 24%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 210 57% 24%;
+    --sidebar-accent: 210 57% 32%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 57% 32%;
+    --sidebar-ring: 210 90% 60%;
+  }
+
+  .dark {
+    --background: 210 50% 8%;
+    --foreground: 210 20% 95%;
+    --card: 210 50% 12%;
+    --card-foreground: 210 20% 95%;
+    --popover: 210 50% 12%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 210 80% 60%;
+    --primary-foreground: 210 50% 8%;
+    --secondary: 210 40% 18%;
+    --secondary-foreground: 210 20% 95%;
+    --muted: 210 40% 18%;
+    --muted-foreground: 210 15% 65%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 210 80% 60%;
+    --sidebar-background: 210 57% 16%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 210 57% 24%;
+    --sidebar-accent: 210 57% 24%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 210 57% 24%;
+    --sidebar-ring: 210 90% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .transition-base {
+    transition: var(--transition-base);
+  }
+}
